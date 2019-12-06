@@ -11,7 +11,7 @@ router.get("/image", (request, response, next) => {
 router.post("/image", (request, response, next) => {
   Image.create(request.body)
     .then(image => response.send(image))
-    .catch(errors => next(erros));
+    .catch(errors => next(errors));
 });
 
 module.exports = router;
